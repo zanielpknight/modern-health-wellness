@@ -1,26 +1,252 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================
+   BASE RESET — must be in @layer base
+   ============================================ */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+  }
+
+  body {
+    background-color: var(--stone);
+    color: var(--charcoal);
+    font-family: var(--font-body), sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  h1 { font-size: var(--text-6xl); line-height: 1.1; }
+  h2 { font-size: var(--text-4xl); line-height: 1.2; }
+  h3 { font-size: var(--text-3xl); line-height: 1.25; }
+  h4 { font-size: var(--text-2xl); line-height: 1.3; }
+  p  { font-size: var(--text-base); line-height: 1.6; }
 }
 
+/* ============================================
+   THEME TOKENS
+   ============================================ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-stone: #FAF8F5;
+  --color-warm-white: #FDFBF9;
+  --color-navy: #1B3A4B;
+  --color-navy-light: #2D5F73;
+  --color-gold: #C8963E;
+  --color-gold-dark: #B07E2E;
+  --color-teal: #3A7D6A;
+  --color-charcoal: #2A2A2A;
+  --color-charcoal-light: #5A5A5A;
+  --color-clay: #7A6E64;
+
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-dm-sans);
 }
 
-@media (prefers-color-scheme: dark) {
+:root {
+  --stone: #FAF8F5;
+  --warm-white: #FDFBF9;
+  --navy: #1B3A4B;
+  --navy-light: #2D5F73;
+  --gold: #C8963E;
+  --gold-dark: #B07E2E;
+  --teal: #3A7D6A;
+  --charcoal: #2A2A2A;
+  --charcoal-light: #5A5A5A;
+  --clay: #7A6E64;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
+
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+
+  --grid-cols: 12;
+  --grid-gutter: 1.5rem;
+  --grid-margin: 1.5rem;
+  --grid-max: 80rem;
+
+  --section-py: var(--space-24);
+  --section-py-lg: var(--space-32);
+}
+
+@media (min-width: 768px) {
+  :root { --grid-margin: 3rem; }
+}
+
+@media (min-width: 1024px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --grid-margin: 4rem;
+    --text-6xl: 4.5rem;
+    --text-4xl: 2.75rem;
+    --text-3xl: 2.25rem;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================
+   GRID SYSTEM
+   ============================================ */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  gap: var(--grid-gutter);
+  max-width: var(--grid-max);
+  margin-inline: auto;
+  padding-inline: var(--grid-margin);
+}
+
+.col-full   { grid-column: 1 / -1; }
+.col-wide   { grid-column: 2 / -2; }
+.col-center { grid-column: 3 / -3; }
+
+@media (min-width: 768px) {
+  .col-left-7  { grid-column: 1 / 8; }
+  .col-right-5 { grid-column: 8 / -1; }
+  .col-left-5  { grid-column: 1 / 6; }
+  .col-right-7 { grid-column: 6 / -1; }
+  .col-left-6  { grid-column: 1 / 7; }
+  .col-right-6 { grid-column: 7 / -1; }
+}
+
+.section {
+  padding-block: var(--section-py);
+}
+
+@media (min-width: 1024px) {
+  .section { padding-block: var(--section-py-lg); }
+}
+
+/* ============================================
+   TEXTURE & EFFECTS
+   ============================================ */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger > .fade-in:nth-child(1) { transition-delay: 0ms; }
+.stagger > .fade-in:nth-child(2) { transition-delay: 80ms; }
+.stagger > .fade-in:nth-child(3) { transition-delay: 160ms; }
+.stagger > .fade-in:nth-child(4) { transition-delay: 240ms; }
+.stagger > .fade-in:nth-child(5) { transition-delay: 320ms; }
+.stagger > .fade-in:nth-child(6) { transition-delay: 400ms; }
+.stagger > .fade-in:nth-child(7) { transition-delay: 480ms; }
+
+@keyframes scroll-line {
+  0%   { transform: scaleY(0); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+
+.scroll-indicator {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.4);
+  transform-origin: top;
+  animation: scroll-line 2.5s ease-in-out infinite;
+}
+
+.page-enter {
+  animation: page-fade-in 0.4s ease-out;
+}
+
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+::selection {
+  background-color: var(--gold);
+  color: white;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 12px 24px;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+  top: 16px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--navy);
+  color: rgba(255, 255, 255, 0.35);
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--text-sm);
+  text-align: center;
+  padding: var(--space-4);
+  letter-spacing: 0.02em;
 }
