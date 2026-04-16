@@ -82,18 +82,23 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right — image */}
-          <div className="col-full md:col-right-6 h-full">
-            <div className="relative w-full h-[50vh] md:h-full md:min-h-[600px]">
-              <ImageLabel text="Replace: Clinic exterior or treatment in action" />
-              <Image
-                src="/images/hero.jpg"
-                alt="Modern wellness clinic — replace with actual clinic photo"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+          {/* Right — image with offset depth effect */}
+          <div className="col-full md:col-right-6 flex items-center justify-center py-[var(--space-6)] md:py-[var(--space-12)]">
+            <div className="relative w-full max-w-[520px]">
+              {/* Navy offset block behind the image */}
+              <div className="absolute top-3 left-3 md:top-4 md:left-4 w-full h-full bg-navy/10" />
+              {/* Image */}
+              <div className="relative aspect-[4/3] border-2 border-navy/15 overflow-hidden">
+                <ImageLabel text="Replace: Clinic exterior or treatment in action" />
+                <Image
+                  src="/images/hero.jpg"
+                  alt="Modern wellness clinic — replace with actual clinic photo"
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 520px"
+                />
+              </div>
             </div>
           </div>
         </div>
