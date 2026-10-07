@@ -57,26 +57,6 @@ export default function TestimonialsPage() {
         </ScrollFade>
       </section>
 
-      {/* Leave a review */}
-      <section className="section bg-warm-white">
-        <div className="grid-layout">
-          <div className="col-full md:col-left-7">
-            <Eyebrow>Share your experience</Eyebrow>
-            <h2 className="mt-[var(--space-3)] font-[family-name:var(--font-heading)] font-semibold text-navy" style={{ fontSize: "var(--text-3xl)" }}>
-              Had a great visit? Leave us a review.
-            </h2>
-            <a
-              href={clinic.googleReviewUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-[var(--space-6)] inline-block rounded-full bg-gold px-7 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer"
-            >
-              Leave a Google review
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-navy py-[var(--space-20)]">
         <div className="grid-layout">

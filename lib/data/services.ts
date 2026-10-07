@@ -18,10 +18,10 @@ export const services: Service[] = [
     shortDescription:
       "Evidence-based chiropractic adjustments and rehabilitation for injuries, chronic pain, and everyday wellness.",
     description:
-      "Injuries are rarely solved with a single adjustment, one exercise, or a single day on medication. At Modern Health and Wellness, our approach focuses on structured injury rehabilitation — not just temporary symptom relief. Whether you were hurt in a car accident, during sports, at work, or from repetitive stress, recovery requires a clear plan. Our goal is simple: reduce pain, restore movement, and rebuild strength so the problem doesn't return. Our structured 4-step process includes: (1) Comprehensive movement assessment and evaluation, (2) Targeted and safe chiropractic adjustments, (3) Soft tissue therapy and corrective exercise prescription, and (4) Ongoing progress re-evaluation. Imaging is available through our imaging partner, [Imaging partner], and initial consultations with exam and x-rays are available through [Healthcare partner] — covered by most insurances. We work with all attorneys and law firms to support auto accident and workers' compensation recovery.",
+      "Injuries are rarely solved with a single adjustment, one exercise, or a single day on medication. At Modern Health and Wellness, our approach focuses on structured injury rehabilitation — not just temporary symptom relief. Whether you were hurt in a car accident, during sports, at work, or from repetitive stress, recovery requires a clear plan. Our goal is simple: reduce pain, restore movement, and rebuild strength so the problem doesn't return. Our structured 4-step process includes: (1) Comprehensive movement assessment and evaluation, (2) Targeted and safe chiropractic adjustments, (3) Soft tissue therapy and corrective exercise prescription, and (4) Ongoing progress re-evaluation. Imaging is available through our imaging partner, Lakeline Imaging Center, and initial consultations with exam and x-rays are available through Capital Area Health Network — covered by most insurances. We work with all attorneys and law firms to support auto accident and workers' compensation recovery.",
     icon: "FirstAid",
     featured: true,
-    providers: ["Dr. [Doctor name 1]", "Dr. [Doctor name 3]"],
+    providers: ["Dr. James Carter", "Dr. Marcus Bell"],
     benefits: [
       "Drug-free pain relief",
       "Improved range of motion",
@@ -30,7 +30,7 @@ export const services: Service[] = [
       "Preventive wellness care",
     ],
     whatToExpect:
-      "Your first visit includes a comprehensive exam, health history review, and if needed, same-day treatment. Initial consultations with exam and x-rays are available through [Healthcare partner] — covered by most insurances. We also coordinate with attorneys and insurance companies for auto accident and workers' compensation cases. Follow-up visits focus on targeted adjustments and progressive rehabilitation exercises to build long-term resilience.",
+      "Your first visit includes a comprehensive exam, health history review, and if needed, same-day treatment. Initial consultations with exam and x-rays are available through Capital Area Health Network — covered by most insurances. We also coordinate with attorneys and insurance companies for auto accident and workers' compensation cases. Follow-up visits focus on targeted adjustments and progressive rehabilitation exercises to build long-term resilience.",
     relatedConditions: [
       "auto-accident-whiplash",
       "low-back-pain",
@@ -46,10 +46,10 @@ export const services: Service[] = [
     shortDescription:
       "Strength and conditioning programs designed by a CSCS-certified chiropractor who understands your body inside and out.",
     description:
-      "Our personal training program is unlike anything you'll find at a gym. Led by Dr. [Doctor name 3] — a Certified Strength and Conditioning Specialist with a background in physical therapy — every workout is informed by clinical knowledge of your musculoskeletal system. We design programs that work with your body, not against it, whether you're building strength after rehab, training for athletic performance, or staying strong as you age. Future chiropractors also serve as trainers under Dr. Spencer's direct guidance. Programs are available for all ages and abilities. You do not need to be an existing patient to sign up.",
+      "Our personal training program is unlike anything you'll find at a gym. Led by Dr. Bell — a Certified Strength and Conditioning Specialist with a background in physical therapy — every workout is informed by clinical knowledge of your musculoskeletal system. We design programs that work with your body, not against it, whether you're building strength after rehab, training for athletic performance, or staying strong as you age. Future chiropractors also serve as trainers under Dr. Bell's direct guidance. Programs are available for all ages and abilities. You do not need to be an existing patient to sign up.",
     icon: "Barbell",
     featured: true,
-    providers: ["Dr. [Doctor name 3]"],
+    providers: ["Dr. Marcus Bell"],
     benefits: [
       "Clinically informed programming",
       "Safe post-rehab strength building",
@@ -58,7 +58,7 @@ export const services: Service[] = [
       "Accountability and form correction",
     ],
     whatToExpect:
-      "Sessions begin with a movement assessment to identify imbalances and limitations. From there, we build a progressive program that evolves with your strength and goals. Sessions are available one-on-one or in small groups. You do not need to be an existing patient to sign up for personal training. Your first session is discounted. To inquire, email [Email address] or call [Phone number].",
+      "Sessions begin with a movement assessment to identify imbalances and limitations. From there, we build a progressive program that evolves with your strength and goals. Sessions are available one-on-one or in small groups. You do not need to be an existing patient to sign up for personal training. Your first session is discounted. To inquire, email hello@example.com or call (512) 555-0147.",
     relatedConditions: ["low-back-pain", "sports-injuries", "shoulder-pain"],
   },
   {
@@ -67,9 +67,9 @@ export const services: Service[] = [
     shortDescription:
       "Traditional acupuncture treatments for pain relief, stress reduction, and whole-body balance.",
     description:
-      "Dr. [Doctor name 2] brings a holistic approach to healing through acupuncture — an ancient practice backed by modern research. By stimulating specific points along the body's meridians, acupuncture promotes natural pain relief, reduces inflammation, and restores balance to the nervous system. Acupuncture treats a wide range of conditions including pain, headaches, sciatica, addictions, and weight loss. Treatments include both traditional acupuncture and auriculotherapy (ear acupuncture). Acupuncture is covered by certain insurances — call our office to verify your coverage.",
+      "Dr. Nair brings a holistic approach to healing through acupuncture — an ancient practice backed by modern research. By stimulating specific points along the body's meridians, acupuncture promotes natural pain relief, reduces inflammation, and restores balance to the nervous system. Acupuncture treats a wide range of conditions including pain, headaches, sciatica, addictions, and weight loss. Treatments include both traditional acupuncture and auriculotherapy (ear acupuncture). Acupuncture is covered by certain insurances — call our office to verify your coverage.",
     icon: "Drop",
-    providers: ["Dr. [Doctor name 2]"],
+    providers: ["Dr. Priya Nair"],
     benefits: [
       "Natural pain management",
       "Reduced stress and anxiety",
@@ -87,7 +87,7 @@ export const services: Service[] = [
     shortDescription:
       "Therapeutic massage to release tension, improve circulation, and accelerate recovery.",
     description:
-      "We have two licensed massage therapists on staff who work alongside our chiropractic team to provide integrated care that addresses your whole body. Massage therapy breaks up adhesions, improves circulation, and helps your adjustments hold longer. We offer a range of modalities including deep tissue, Swedish, trigger point therapy, and sports massage — each tailored to your specific needs and comfort level. Please note: massage appointments must be booked by calling our office at [Phone number] — online booking is not available for massage.",
+      "We have two licensed massage therapists on staff who work alongside our chiropractic team to provide integrated care that addresses your whole body. Massage therapy breaks up adhesions, improves circulation, and helps your adjustments hold longer. We offer a range of modalities including deep tissue, Swedish, trigger point therapy, and sports massage — each tailored to your specific needs and comfort level. Please note: massage appointments must be booked by calling our office at (512) 555-0147 — online booking is not available for massage.",
     icon: "Hands",
     benefits: [
       "Muscle tension and stress relief",
@@ -111,9 +111,9 @@ export const services: Service[] = [
     shortDescription:
       "Personalized nutrition counseling and weight management programs grounded in functional medicine.",
     description:
-      "Dr. [Doctor name 2] provides physician-monitored weight loss and nutritional counseling combining nutritional science with a functional medicine approach. Our programs go beyond calorie counting — we use Bioelectrical Impedance Analysis (BIA) to measure body composition, address the root causes of weight gain including hormonal imbalances, food sensitivities, and metabolic health. With customized meal plans and weekly counseling sessions, we help you build sustainable habits that transform your health from the inside out.",
+      "Dr. Nair provides physician-monitored weight loss and nutritional counseling combining nutritional science with a functional medicine approach. Our programs go beyond calorie counting — we use Bioelectrical Impedance Analysis (BIA) to measure body composition, address the root causes of weight gain including hormonal imbalances, food sensitivities, and metabolic health. With customized meal plans and weekly counseling sessions, we help you build sustainable habits that transform your health from the inside out.",
     icon: "Leaf",
-    providers: ["Dr. [Doctor name 2]"],
+    providers: ["Dr. Priya Nair"],
     benefits: [
       "Personalized nutrition plans",
       "Metabolic health optimization",
@@ -140,7 +140,7 @@ export const services: Service[] = [
       "Complement to chiropractic care",
     ],
     whatToExpect:
-      "We now offer yoga classes. Please call our office at [Phone number] to sign up and get details on schedules and pricing.",
+      "We now offer yoga classes. Please call our office at (512) 555-0147 to sign up and get details on schedules and pricing.",
   },
   {
     slug: "health-products",

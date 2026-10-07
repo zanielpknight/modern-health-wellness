@@ -21,6 +21,13 @@ function getLocalBusinessSchema() {
       postalCode: clinic.address.zip,
       addressCountry: "US",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: clinic.geo.latitude,
+      longitude: clinic.geo.longitude,
+    },
+    hasMap: clinic.mapsUrl,
+    email: clinic.email,
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -41,7 +48,6 @@ function getLocalBusinessSchema() {
         closes: "12:00",
       },
     ],
-    sameAs: [clinic.social.facebook, clinic.social.instagram, clinic.social.yelp],
     priceRange: "$$",
   };
 }

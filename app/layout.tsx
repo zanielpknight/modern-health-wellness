@@ -22,14 +22,14 @@ const figtree = Figtree({
 
 export const metadata: Metadata = {
   title: {
-    default: "Modern Health & Wellness | Chiropractor in [City], [State]",
+    default: "Modern Health & Wellness | Chiropractor in Austin, TX",
     template: "%s | Modern Health & Wellness",
   },
   description:
-    "[City]'s most trusted chiropractic team since 1990. Chiropractic care, acupuncture, personal training, massage therapy, and nutrition counseling.",
+    "Austin's most trusted chiropractic team since 1990. Chiropractic care, acupuncture, personal training, massage therapy, and nutrition counseling.",
   openGraph: {
-    title: "Modern Health & Wellness | Chiropractor in [City], [State]",
-    description: "3 doctors. 7 specialized services. 35+ years helping families in [City] move, heal, and thrive.",
+    title: "Modern Health & Wellness | Chiropractor in Austin, TX",
+    description: "3 doctors. 7 specialized services. 35+ years helping families in Austin move, heal, and thrive.",
     url: "https://example.com",
     siteName: "Modern Health & Wellness",
     locale: "en_US",

@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
 import PageHeader from "@/components/PageHeader";
-import ImageLabel from "@/components/ImageLabel";
 import { getDoctors, getStaff } from "@/lib/data/team";
 import { clinic } from "@/lib/data/clinic";
 import Eyebrow from "@/components/Eyebrow";
@@ -12,7 +11,7 @@ const doctorImages = ["/images/doctor-1.jpg", "/images/doctor-2.jpg", "/images/d
 
 export const metadata: Metadata = {
   title: "Our Team",
-  description: "Meet the doctors and staff at Modern Health & Wellness in [City], [State].",
+  description: "Meet the doctors and staff at Modern Health & Wellness in Austin, TX.",
 };
 
 export default function TeamPage() {
@@ -35,7 +34,6 @@ export default function TeamPage() {
               {doctors.map((doc, i) => (
                 <Link key={doc.slug} href={`/team/${doc.slug}`} className={`group fade-in ${i === 1 ? "md:translate-y-12" : ""}`}>
                   <div className={`relative overflow-hidden rounded-2xl mb-[var(--space-5)] ${i === 1 ? "aspect-[4/5]" : "aspect-[3/4]"}`}>
-                    <ImageLabel text={`Replace: Headshot of ${doc.name}`} />
                     <Image
                       src={doctorImages[i]}
                       alt={`Headshot of ${doc.name}`}

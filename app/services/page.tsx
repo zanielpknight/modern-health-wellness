@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
-import ImageLabel from "@/components/ImageLabel";
 import PageHeader from "@/components/PageHeader";
 import { services } from "@/lib/data/services";
 import { clinic } from "@/lib/data/clinic";
@@ -44,10 +43,9 @@ export default function ServicesPage() {
                   i < services.length - 1 ? "border-b border-clay/10" : ""
                 }`}>
                   <div className={`relative aspect-[16/10] md:aspect-[4/3] overflow-hidden rounded-2xl ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                    <ImageLabel text={`Replace: ${service.name} photo`} />
                     <Image
                       src={serviceImages[service.slug] || "/images/clinic-interior.jpg"}
-                      alt={`${service.name} — replace with actual service photo`}
+                      alt={`${service.name} at Modern Health & Wellness`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                       sizes="(max-width: 768px) 100vw, 33vw"

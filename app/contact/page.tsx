@@ -112,6 +112,8 @@ export default function ContactPage() {
                   <Eyebrow tone="clay" className="mb-[var(--space-3)]">Address</Eyebrow>
                   <a
                     href={clinic.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="font-[family-name:var(--font-body)] text-navy hover:text-gold transition-colors duration-200"
                     style={{ fontSize: "var(--text-base)" }}
                   >
@@ -143,18 +145,14 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <Eyebrow tone="clay" className="mb-[var(--space-3)]">Social</Eyebrow>
-                  <div className="flex flex-wrap gap-[var(--space-3)] sm:gap-[var(--space-6)]">
-                    <a href={clinic.social.facebook} target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-body)] text-navy hover:text-gold transition-colors duration-200" style={{ fontSize: "var(--text-sm)" }}>
-                      Facebook
-                    </a>
-                    <a href={clinic.social.instagram} target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-body)] text-navy hover:text-gold transition-colors duration-200" style={{ fontSize: "var(--text-sm)" }}>
-                      Instagram
-                    </a>
-                    <a href={clinic.social.yelp} target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-body)] text-navy hover:text-gold transition-colors duration-200" style={{ fontSize: "var(--text-sm)" }}>
-                      Yelp
-                    </a>
-                  </div>
+                  <Eyebrow tone="clay" className="mb-[var(--space-3)]">Email</Eyebrow>
+                  <a
+                    href={clinic.emailHref}
+                    className="font-[family-name:var(--font-body)] text-navy hover:text-gold transition-colors duration-200"
+                    style={{ fontSize: "var(--text-base)" }}
+                  >
+                    {clinic.email}
+                  </a>
                 </div>
               </div>
             </div>

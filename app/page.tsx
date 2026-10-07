@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
 import TestimonialTabs from "@/components/TestimonialTabs";
-import ImageLabel from "@/components/ImageLabel";
 import { clinic } from "@/lib/data/clinic";
 import { services } from "@/lib/data/services";
 import { getDoctors } from "@/lib/data/team";
@@ -28,7 +27,7 @@ export default function HomePage() {
               <AuroraBackground />
             </div>
             <div className="relative">
-            <Eyebrow>[City], [State] &middot; Est. 1990</Eyebrow>
+            <Eyebrow>Austin, Texas &middot; Est. 1990</Eyebrow>
 
             <h1
               className="mt-[var(--space-4)] font-[family-name:var(--font-heading)] font-semibold text-navy"
@@ -69,13 +68,13 @@ export default function HomePage() {
                 className="mt-[var(--space-2)] font-[family-name:var(--font-heading)] font-semibold text-navy"
                 style={{ fontSize: "var(--text-2xl)" }}
               >
-                [Partner team or university]
+                Austin Rivermen Hockey Club
               </p>
               <p
                 className="mt-[var(--space-1)] font-[family-name:var(--font-body)] text-gold font-medium"
                 style={{ fontSize: "var(--text-base)" }}
               >
-                [Notable achievement]
+                2023 Southwest Regional Champions
               </p>
             </div>
             </div>
@@ -85,10 +84,9 @@ export default function HomePage() {
           <div className="col-full md:col-right-6 md:self-end flex items-end justify-center md:justify-end pt-[var(--space-6)] md:pt-[var(--space-12)]">
             <div className="relative z-10 w-full max-w-[480px] md:-mb-16">
               <div className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_24px_60px_-24px_rgba(27,58,75,0.35)]">
-                <ImageLabel text="Replace: Clinic exterior or treatment in action" />
                 <Image
                   src="/images/hero.jpg"
-                  alt="Modern wellness clinic — replace with actual clinic photo"
+                  alt="Treatment room at Modern Health & Wellness"
                   fill
                   priority
                   className="object-cover"
@@ -131,7 +129,7 @@ export default function HomePage() {
                 className="mt-[var(--space-6)] font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed"
                 style={{ fontSize: "var(--text-base)" }}
               >
-                Get out of pain and back to normal activity with targeted and modern chiropractic care. We help patients in [City] with back pain, neck pain, sciatica, and injury recovery from sports, work, or auto accidents — without relying on medication or long-term dependency. Dr. Pat, Dr. Jen and Dr. Spencer all strongly believe in promoting well-being through good nutrition and physical health, with an emphasis on a team approach to conservative holistic health care.
+                Get out of pain and back to normal activity with targeted and modern chiropractic care. We help patients in Austin with back pain, neck pain, sciatica, and injury recovery from sports, work, or auto accidents — without relying on medication or long-term dependency. Dr. Carter, Dr. Nair and Dr. Bell all strongly believe in promoting well-being through good nutrition and physical health, with an emphasis on a team approach to conservative holistic health care.
               </p>
               <blockquote className="mt-[var(--space-6)] pl-[var(--space-4)] border-l-2 border-gold/40">
                 <p className="font-[family-name:var(--font-heading)] italic text-navy" style={{ fontSize: "var(--text-lg)" }}>
@@ -142,7 +140,7 @@ export default function HomePage() {
                 className="mt-[var(--space-6)] font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed"
                 style={{ fontSize: "var(--text-sm)" }}
               >
-                Modern Health and Wellness now offers in-house yoga, physical therapy, and therapeutic massage — comprehensive services tailored for men, women, and children. Initial consultations with exam and x-rays available through [Healthcare partner] — covered by most insurances.
+                Modern Health and Wellness now offers in-house yoga, physical therapy, and therapeutic massage — comprehensive services tailored for men, women, and children. Initial consultations with exam and x-rays available through Capital Area Health Network — covered by most insurances.
               </p>
             </div>
             <div className="col-full md:col-right-5 fade-in mt-8 md:mt-0">
@@ -227,10 +225,9 @@ export default function HomePage() {
 
       {/* ─── Image + overlay quote ─── */}
       <section className="relative h-[60vh] overflow-hidden">
-        <ImageLabel text="Replace: Doctor performing adjustment or treatment" />
         <Image
           src="/images/adjustment.jpg"
-          alt="Treatment session — replace with actual clinic photo"
+          alt="Treatment session at Modern Health & Wellness"
           fill
           className="object-cover"
           sizes="100vw"
@@ -279,7 +276,6 @@ export default function HomePage() {
                   className={`group fade-in ${i === 1 ? "md:translate-y-12" : ""}`}
                 >
                   <div className={`relative overflow-hidden rounded-2xl ${i === 1 ? "aspect-[4/5]" : "aspect-[3/4]"}`}>
-                    <ImageLabel text={`Replace: Headshot of ${doc.name}`} />
                     <Image
                       src={doctorImages[i]}
                       alt={`Headshot of ${doc.name}`}

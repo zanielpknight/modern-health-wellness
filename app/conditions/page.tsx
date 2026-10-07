@@ -8,7 +8,7 @@ import { clinic } from "@/lib/data/clinic";
 export const metadata: Metadata = {
   title: "Conditions We Treat",
   description:
-    "Chiropractic care for auto accidents, low back pain, neck pain, headaches, shoulder injuries, sports injuries, and post-PT recovery in [City], [State].",
+    "Chiropractic care for auto accidents, low back pain, neck pain, headaches, shoulder injuries, sports injuries, and post-PT recovery in Austin, TX.",
 };
 
 export default function ConditionsPage() {

@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="mt-6 text-center font-[family-name:var(--font-body)] text-xs text-white/30">
-          Demo site. Location, contact details and names are placeholders.
+          Concept demo — a fictional practice created to showcase this website template.
         </p>
       </div>
     </footer>

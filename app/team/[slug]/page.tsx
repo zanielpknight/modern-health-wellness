@@ -3,15 +3,14 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
-import ImageLabel from "@/components/ImageLabel";
 import { team, getTeamMember } from "@/lib/data/team";
 import { clinic } from "@/lib/data/clinic";
 import Eyebrow from "@/components/Eyebrow";
 
 const doctorImageMap: Record<string, string> = {
-  "doctor-1": "/images/doctor-1.jpg",
-  "doctor-2": "/images/doctor-2.jpg",
-  "doctor-3": "/images/doctor-3.jpg",
+  "james-carter": "/images/doctor-1.jpg",
+  "priya-nair": "/images/doctor-2.jpg",
+  "marcus-bell": "/images/doctor-3.jpg",
 };
 
 export function generateStaticParams() {
@@ -51,7 +50,6 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
           <div className="grid-layout">
             <div className="col-full md:col-left-5 fade-in">
               <div className="relative aspect-[1/1] max-w-[280px] overflow-hidden sticky top-20 md:top-32">
-                <ImageLabel text={`Replace: Portrait of ${member.name}`} />
                 <Image
                   src={doctorImageMap[slug] || "/images/doctor-1.jpg"}
                   alt={`Headshot of ${member.name}`}
@@ -175,7 +173,7 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
                   <ul className="space-y-[var(--space-2)]">
                     {member.professionalAssociations.map((a) => (
                       <li key={a.name}>
-                        {a.url !== "#" ? (
+                        {a.url ? (
                           <a href={a.url} target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-body)] text-navy hover:text-gold transition-colors duration-200" style={{ fontSize: "var(--text-sm)" }}>
                             {a.name}
                           </a>

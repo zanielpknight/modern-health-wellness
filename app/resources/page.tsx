@@ -14,43 +14,36 @@ const products = [
   {
     name: "Uncle Bob's Cervical Traction Device",
     description: "At-home cervical traction for neck pain relief.",
-    url: "#",
     category: "Equipment",
   },
   {
     name: "Low Back / Spine Ice Pack",
     description: "Targeted cold therapy for lower back pain and inflammation.",
-    url: "#",
     category: "Recovery",
   },
   {
     name: "Neck Ice Pack",
     description: "Contoured ice pack designed for the cervical spine.",
-    url: "#",
     category: "Recovery",
   },
   {
     name: "Shoulder Ice Pack",
     description: "Wrap-around cold therapy for shoulder injuries.",
-    url: "#",
     category: "Recovery",
   },
   {
     name: "Beginner Resistance Bands / Shoulder Rehab Kit",
     description: "Progressive resistance bands for home rehabilitation exercises.",
-    url: "#",
     category: "Equipment",
   },
   {
     name: "Fitness Gear Pro Resistance Tube",
     description: "Professional-grade resistance tube for strength training.",
-    url: "https://www.dickssportinggoods.com/p/fitness-gear-pro-resistance-tube-17fgeufgprrsstncceac/17fgeufgprrsstncceac",
     category: "Equipment",
   },
   {
     name: "Creatine Supplement",
     description: "Doctor-recommended creatine monohydrate for strength and recovery.",
-    url: "#",
     category: "Supplements",
   },
 ];
@@ -58,24 +51,21 @@ const products = [
 const programs = [
   {
     name: "Core Rehab #1: Re-Learning HOW to MOVE",
-    description: "Online course by Dr. [Doctor name 1]. Learn foundational movement patterns for injury prevention and recovery.",
+    description: "Online course by Dr. Carter. Learn foundational movement patterns for injury prevention and recovery.",
     price: "$29",
-    url: "#",
-    provider: "Dr. [Doctor name 1]",
+    provider: "Dr. James Carter",
   },
   {
     name: "Rvs.B Health RESET Program",
-    description: "25-day fitness transformation by Dr. [Doctor name 3]. Includes daily workouts, grocery lists, exercise program, and food guide.",
+    description: "25-day fitness transformation by Dr. Bell. Includes daily workouts, grocery lists, exercise program, and food guide.",
     price: "$9.99",
-    url: "#",
-    provider: "Dr. [Doctor name 3]",
+    provider: "Dr. Marcus Bell",
   },
   {
     name: "Free Weight-Loss Grocery List",
     description: "A free downloadable grocery guide to kickstart healthier eating habits.",
     price: "Free",
-    url: "#",
-    provider: "Dr. [Doctor name 3]",
+    provider: "Dr. Marcus Bell",
   },
 ];
 
@@ -100,11 +90,9 @@ export default function ResourcesPage() {
             </div>
 
             {programs.map((p) => (
-              <a
+              <Link
                 key={p.name}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
                 className="col-full fade-in group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between py-[var(--space-6)] border-b border-clay/10">
@@ -126,7 +114,7 @@ export default function ResourcesPage() {
                     {p.price}
                   </span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </ScrollFade>
@@ -144,17 +132,11 @@ export default function ResourcesPage() {
             </div>
 
             {products.map((p) => (
-              <a
-                key={p.name}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="col-full fade-in group"
-              >
+              <div key={p.name} className="col-full fade-in">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between py-[var(--space-4)] border-b border-clay/10">
                   <div>
                     <h3
-                      className="font-[family-name:var(--font-body)] font-medium text-navy group-hover:text-gold transition-colors duration-200"
+                      className="font-[family-name:var(--font-body)] font-medium text-navy"
                       style={{ fontSize: "var(--text-base)" }}
                     >
                       {p.name}
@@ -164,10 +146,10 @@ export default function ResourcesPage() {
                     </p>
                   </div>
                   <span className="mt-1 sm:mt-0 font-[family-name:var(--font-body)] text-sm text-clay shrink-0">
-                    {p.category} &rarr;
+                    {p.category}
                   </span>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </ScrollFade>
@@ -182,16 +164,14 @@ export default function ResourcesPage() {
               Doctor-guided small group classes
             </h2>
             <p className="mt-[var(--space-4)] font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed" style={{ fontSize: "var(--text-base)" }}>
-              Led by Dr. [Doctor name 3], our group exercise classes are designed for adults of all fitness levels — with dedicated programming for ages 30–45, 50+, and 60+. Small class sizes ensure personalized attention and safe progression.
+              Led by Dr. Bell, our group exercise classes are designed for adults of all fitness levels — with dedicated programming for ages 30–45, 50+, and 60+. Small class sizes ensure personalized attention and safe progression.
             </p>
-            <a
-              href={clinic.classSignupUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="mt-[var(--space-6)] inline-block rounded-full bg-gold px-7 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer"
             >
-              Sign Up for Classes
-            </a>
+              Sign up for classes
+            </Link>
           </div>
         </div>
       </section>

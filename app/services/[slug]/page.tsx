@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
-import ImageLabel from "@/components/ImageLabel";
 import { services, getService } from "@/lib/data/services";
 
 const serviceImages: Record<string, string> = {
@@ -81,10 +80,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       {/* Image */}
       <section className="relative h-[40vh] sm:h-[50vh] overflow-hidden">
-        <ImageLabel text={`Replace: ${service.name} in action`} />
         <Image
           src={serviceImages[slug] || "/images/clinic-interior.jpg"}
-          alt={`${service.name} — replace with actual service photo`}
+          alt={`${service.name} at Modern Health & Wellness`}
           fill
           className="object-cover"
           sizes="100vw"

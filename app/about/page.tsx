@@ -3,13 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
 import PageHeader from "@/components/PageHeader";
-import ImageLabel from "@/components/ImageLabel";
 import { clinic } from "@/lib/data/clinic";
 import Eyebrow from "@/components/Eyebrow";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Modern Health & Wellness has been [City]'s trusted chiropractic team since 1990.",
+  description: "Modern Health & Wellness has been Austin's trusted chiropractic team since 1990.",
 };
 
 export default function AboutPage() {
@@ -18,7 +17,7 @@ export default function AboutPage() {
       <PageHeader
         label="About"
         title="More than a clinic."
-        subtitle="For over 35 years, we've been helping families in [City] move better, heal faster, and live healthier."
+        subtitle="For over 35 years, we've been helping families in Austin move better, heal faster, and live healthier."
       />
 
       {/* Story */}
@@ -34,31 +33,30 @@ export default function AboutPage() {
               </h2>
               <div className="mt-[var(--space-6)] space-y-[var(--space-4)] font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed" style={{ fontSize: "var(--text-base)" }}>
                 <p>
-                  In 1990, Dr. [Doctor name 1] opened Modern Health & Wellness
+                  In 1990, Dr. Carter opened Modern Health & Wellness
                   with a simple belief: chiropractic care should be accessible,
                   evidence-based, and genuinely focused on helping people get
                   better — not just managing symptoms.
                 </p>
                 <p>
-                  Over the decades, that vision expanded. Dr. [Doctor name 2]
+                  Over the decades, that vision expanded. Dr. Nair
                   brought acupuncture and nutritional counseling into the practice.
-                  Dr. [Doctor name 3] — the next generation — added strength and
+                  Dr. Bell — the next generation — added strength and
                   conditioning expertise, bridging rehabilitation and performance.
                 </p>
                 <p>
                   Today we offer seven specialized services under one roof. We&apos;re
-                  proud to be the team chiropractors for [Partner team or university]
-                  ([Notable achievement]) — but we&apos;re equally proud of every patient who walks
+                  proud to be the team chiropractors for the Austin Rivermen Hockey Club
+                  (2023 Southwest Regional Champions) — but we&apos;re equally proud of every patient who walks
                   through our doors.
                 </p>
               </div>
             </div>
             <div className="col-full md:col-right-5 fade-in mt-8 md:mt-0">
               <div className="relative aspect-[1/1] max-w-full sm:max-w-[320px] overflow-hidden">
-                <ImageLabel text="Replace: Clinic team photo or exterior" />
                 <Image
                   src="/images/about-team.jpg"
-                  alt="Healthcare team — replace with actual clinic team photo"
+                  alt="Healthcare team at Modern Health & Wellness"
                   fill
                   className="object-cover"
                   sizes="320px"
@@ -101,10 +99,9 @@ export default function AboutPage() {
 
       {/* Image break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <ImageLabel text="Replace: Training area or gym in use" />
         <Image
           src="/images/training.jpg"
-          alt="Training session — replace with actual clinic photo"
+          alt="Training session at Modern Health & Wellness"
           fill
           className="object-cover"
           sizes="100vw"
