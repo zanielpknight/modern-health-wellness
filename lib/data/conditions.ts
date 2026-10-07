@@ -109,7 +109,7 @@ export const conditions: Condition[] = [
     shortDescription:
       "Comprehensive treatment for rotator cuff injuries, frozen shoulder, impingement, and other shoulder conditions.",
     description:
-      "The shoulder is one of the most complex and mobile joints in the body, making it vulnerable to a wide range of injuries and conditions. Whether you're dealing with a rotator cuff tear, frozen shoulder, impingement syndrome, or shoulder instability, our team combines chiropractic care with targeted rehabilitation to restore function and reduce pain. Dr. Spencer Hackett's strength and conditioning background is particularly valuable for shoulder rehabilitation, ensuring you rebuild both mobility and strength.",
+      "The shoulder is one of the most complex and mobile joints in the body, making it vulnerable to a wide range of injuries and conditions. Whether you're dealing with a rotator cuff tear, frozen shoulder, impingement syndrome, or shoulder instability, our team combines chiropractic care with targeted rehabilitation to restore function and reduce pain. Dr. [Doctor name 3]'s strength and conditioning background is particularly valuable for shoulder rehabilitation, ensuring you rebuild both mobility and strength.",
     symptoms: [
       "Pain when reaching overhead or behind your back",
       "Weakness when lifting or carrying",
@@ -133,7 +133,7 @@ export const conditions: Condition[] = [
     shortDescription:
       "From weekend warriors to NCAA athletes — expert sports injury treatment and performance optimization.",
     description:
-      "As the team chiropractors for Quinnipiac University Men's Ice Hockey — including the 2023 NCAA National Championship team — our doctors understand the demands athletes place on their bodies. Whether you're a competitive athlete dealing with a sports-specific injury or a recreational player who overdid it on the weekend, we provide the same level of expert care. Our approach goes beyond just treating the injury — we identify the underlying biomechanical issues that led to it and build a plan to get you back in the game stronger than before.",
+      "As the team chiropractors for [Partner team or university] — [Notable achievement] — our doctors understand the demands athletes place on their bodies. Whether you're a competitive athlete dealing with a sports-specific injury or a recreational player who overdid it on the weekend, we provide the same level of expert care. Our approach goes beyond just treating the injury — we identify the underlying biomechanical issues that led to it and build a plan to get you back in the game stronger than before.",
     symptoms: [
       "Acute pain from a specific incident",
       "Chronic overuse injuries",
@@ -167,7 +167,7 @@ export const conditions: Condition[] = [
       "Plateau in recovery progress",
     ],
     howWeHelp:
-      "Our post-PT program combines chiropractic adjustments to maintain joint mobility with Dr. Spencer's strength and conditioning expertise to progressively load and strengthen the affected area. We pick up where PT left off — with a plan that evolves as you get stronger. The goal is to get you back to full activity, not just pain-free but performing at your best.",
+      "Our post-PT program combines chiropractic adjustments to maintain joint mobility with Dr. [Doctor name 3]'s strength and conditioning expertise to progressively load and strengthen the affected area. We pick up where PT left off — with a plan that evolves as you get stronger. The goal is to get you back to full activity, not just pain-free but performing at your best.",
     relatedServices: [
       "injury-rehab-chiropractic",
       "personal-training",

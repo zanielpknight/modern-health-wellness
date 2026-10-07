@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import ScrollFade from "@/components/ScrollFade";
 import { clinic } from "@/lib/data/clinic";
+import Eyebrow from "@/components/Eyebrow";
 
 const posts: Record<string, { title: string; category: string; date: string; content: string[]; links?: { text: string; url: string }[]; youtubeEmbed?: string }> = {
   "benefits-of-group-exercise-classes": {
@@ -10,15 +11,15 @@ const posts: Record<string, { title: string; category: string; date: string; con
     category: "Fitness",
     date: "2025-12-08",
     content: [
-      "New for January — Modern Health and Wellness is launching doctor-guided small group exercise classes led by Dr. Spencer Hackett, CSCS.",
+      "New for January — Modern Health and Wellness is launching doctor-guided small group exercise classes led by Dr. [Doctor name 3], CSCS.",
       "These are not generic gym classes. Every session is designed by a chiropractor and certified strength and conditioning specialist who understands injury prevention, movement mechanics, and how to safely progress adults of all fitness levels.",
       "We're offering three age-specific tiers to ensure personalized attention: Ages 30–45 (athletic performance and injury prevention), Ages 50+ (functional strength and mobility), and Ages 60+ (safe, supervised strength training for healthy aging).",
-      "Class sizes are kept small so Dr. Spencer can provide individualized corrections and modifications. Whether you're coming back from an injury, trying to stay active, or looking for structured guidance, these classes meet you where you are.",
+      "Class sizes are kept small so Dr. [Doctor name 3] can provide individualized corrections and modifications. Whether you're coming back from an injury, trying to stay active, or looking for structured guidance, these classes meet you where you are.",
       "Early-bird pricing: $100/month (regularly $130/month). We're also offering a gift-a-friend promotion — sign up a friend and both of you get the early-bird rate.",
-      "Ready to sign up? Fill out our early-bird sign-up form (link below) or call the office at (203) 230-2225.",
+      "Ready to sign up? Fill out our early-bird sign-up form (link below) or call the office at [Phone number].",
     ],
     links: [
-      { text: "Early-Bird / Gift-a-Friend Sign-Up Form", url: "https://forms.gle/eTTTBtF8CZbdp9fCA" },
+      { text: "Early-Bird / Gift-a-Friend Sign-Up Form", url: "#" },
     ],
   },
   "strength-training-for-seniors": {
@@ -27,11 +28,11 @@ const posts: Record<string, { title: string; category: string; date: string; con
     date: "2025-09-15",
     content: [
       "After age 30, we lose approximately 3–5% of our muscle mass per decade. By age 60, this muscle loss — called sarcopenia — can significantly impact your strength, balance, mobility, and independence. The good news? Strength training can slow, stop, and even reverse this process at any age.",
-      "Dr. Spencer Hackett, our CSCS-certified chiropractor and strength coach, has developed specialized training programs for adults over 60. His approach combines clinical knowledge of the aging musculoskeletal system with evidence-based strength and conditioning principles.",
+      "Dr. [Doctor name 3], our CSCS-certified chiropractor and strength coach, has developed specialized training programs for adults over 60. His approach combines clinical knowledge of the aging musculoskeletal system with evidence-based strength and conditioning principles.",
       "The benefits of strength training for seniors extend far beyond bigger muscles. Regular resistance exercise: improves bone density (reducing fracture risk), enhances joint stability, boosts metabolism, improves blood sugar regulation, and even supports cognitive function. Studies have shown that seniors who strength train regularly have a significantly lower risk of falls — the leading cause of injury-related death in adults over 65.",
       "One of the biggest misconceptions is that strength training is dangerous for older adults. In fact, when properly supervised, it's one of the safest and most beneficial forms of exercise available. The key is appropriate programming — starting with manageable loads, focusing on proper technique, and progressing gradually.",
-      "Our senior strength training programs begin with a thorough movement assessment to identify any limitations, imbalances, or areas of concern. From there, Dr. Spencer creates a personalized program that addresses your specific goals — whether that's staying independent, playing with your grandchildren, getting back to a sport, or simply feeling stronger and more confident in your daily life.",
-      "You don't need to be in great shape to start. You just need to start. Contact us at (203) 230-2225 to learn more about our personal training programs for adults 60 and older.",
+      "Our senior strength training programs begin with a thorough movement assessment to identify any limitations, imbalances, or areas of concern. From there, Dr. [Doctor name 3] creates a personalized program that addresses your specific goals — whether that's staying independent, playing with your grandchildren, getting back to a sport, or simply feeling stronger and more confident in your daily life.",
+      "You don't need to be in great shape to start. You just need to start. Contact us at [Phone number] to learn more about our personal training programs for adults 60 and older.",
     ],
   },
   "auto-accident-whiplash-injuries": {
@@ -83,7 +84,7 @@ const posts: Record<string, { title: string; category: string; date: string; con
       "How chiropractic care helps: gentle spinal adjustments when appropriate, non-adjusting techniques such as traction to reduce nerve and joint irritation, soft tissue therapies to improve mobility, and exercise and posture guidance to prevent recurrence. These approaches are well tolerated, extremely safe, and adapted to each individual's needs and comfort level. Imaging is used when clinically relevant, based on history, symptoms, and response to care.",
       "Neck pain doesn't have to be something you 'just live with.' Whether your symptoms stem from strain, joint dysfunction, or disc involvement, identifying the pain generator is the first step toward recovery. Schedule an evaluation to determine the cause and begin safe, targeted care.",
     ],
-    youtubeEmbed: "https://www.youtube.com/embed/UqSHjomLCRU",
+    youtubeEmbed: "[Video embed: neck pain explainer]",
   },
   "chiropractic-treatment-of-headaches": {
     title: "Chiropractic Treatment of Headaches: Different Types, Different Causes",
@@ -100,7 +101,7 @@ const posts: Record<string, { title: string; category: string; date: string; con
     ],
   },
   "injury-rehabilitation-chiropractic": {
-    title: "Injury Rehabilitation Chiropractic Care in Hamden",
+    title: "Injury Rehabilitation Chiropractic Care in [City]",
     category: "Services",
     date: "2026-03-05",
     content: [
@@ -108,12 +109,12 @@ const posts: Record<string, { title: string; category: string; date: string; con
       "Whether you were hurt in a car accident, during sports, at work, or from repetitive stress, recovery requires a clear plan. Our goal is simple: reduce pain, restore movement, and rebuild strength so the problem doesn't return.",
       "What makes injury rehabilitation different from traditional care? Traditional care can reduce discomfort quickly. But lasting recovery requires more than symptom management. Our approach includes: comprehensive movement assessment, targeted and safe chiropractic adjustments, soft tissue therapy when appropriate, corrective exercise prescription, and ongoing progress re-evaluation.",
       "Common injuries we treat: auto accident injuries and whiplash, sports-related injuries, work-related strain injuries, chronic neck and back pain, and shoulder and hip dysfunction. If you were injured in a motor vehicle accident, visit our Auto Accident Injury page for specific information about documentation, insurance coordination, and recovery planning.",
-      "Our step-by-step process: Step 1 — Evaluation: A thorough physical exam identifies the pain generator and any underlying dysfunction. Prior imaging, if available, is reviewed. Additional imaging may be recommended through our partner Whitney Imaging / Midstate Radiology or Hartford Healthcare. Step 2 — Targeted Treatment: Safe chiropractic adjustments, soft tissue therapy, and non-adjusting techniques are used to reduce pain and restore joint function. Step 3 — Corrective Exercise: Specific exercises are prescribed to restore strength, mobility, and stability. Dr. Spencer Hackett's CSCS certification ensures exercise programming is clinically informed. Step 4 — Re-Evaluation & Prevention: Progress is tracked with structured re-examinations. Care evolves with your recovery, and long-term prevention strategies are built in.",
+      "Our step-by-step process: Step 1 — Evaluation: A thorough physical exam identifies the pain generator and any underlying dysfunction. Prior imaging, if available, is reviewed. Additional imaging may be recommended through our imaging partner, [Imaging partner]. Step 2 — Targeted Treatment: Safe chiropractic adjustments, soft tissue therapy, and non-adjusting techniques are used to reduce pain and restore joint function. Step 3 — Corrective Exercise: Specific exercises are prescribed to restore strength, mobility, and stability. Dr. [Doctor name 3]'s CSCS certification ensures exercise programming is clinically informed. Step 4 — Re-Evaluation & Prevention: Progress is tracked with structured re-examinations. Care evolves with your recovery, and long-term prevention strategies are built in.",
       "Care is always personalized and guided by three criteria: best available evidence-based practice guidelines, physicians' expertise with similar conditions, and patients' comfort, goals, and trust.",
-      "If you've been injured — whether recently or dealing with lingering pain — don't wait. Contact Modern Health & Wellness at (203) 230-2225 or book online to schedule your evaluation and start your path to full recovery.",
+      "If you've been injured — whether recently or dealing with lingering pain — don't wait. Contact Modern Health & Wellness at [Phone number] or book online to schedule your evaluation and start your path to full recovery.",
     ],
     links: [
-      { text: "Whitney Imaging / Midstate Radiology", url: "https://www.midstateradiology.com/locations/whitney-imaging/" },
+      { text: "[Imaging partner]", url: "#" },
     ],
   },
 };
@@ -140,7 +141,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <div className="pt-32 pb-[var(--space-8)] bg-warm-white">
         <div className="grid-layout">
           <div className="col-full">
-            <Link href="/blog" className="font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-clay hover:text-navy transition-colors duration-200">
+            <Link href="/blog" className="font-[family-name:var(--font-body)] text-sm font-medium text-clay hover:text-navy transition-colors duration-200">
               &larr; Blog
             </Link>
           </div>
@@ -150,10 +151,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="pb-[var(--space-16)] bg-warm-white">
         <div className="grid-layout">
           <div className="col-full md:col-left-7">
-            <p className="font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.2em] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-              {post.category} &middot; {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
-            </p>
-            <h1 className="mt-[var(--space-4)] font-[family-name:var(--font-playfair)] font-semibold text-navy" style={{ fontSize: "var(--text-5xl)", lineHeight: 1.15 }}>
+            <Eyebrow tone="clay">{post.category} &middot; {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</Eyebrow>
+            <h1 className="mt-[var(--space-4)] font-[family-name:var(--font-heading)] font-semibold text-navy" style={{ fontSize: "var(--text-5xl)", lineHeight: 1.15 }}>
               {post.title}
             </h1>
           </div>
@@ -165,35 +164,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="grid-layout">
             <div className="col-full md:col-left-7 fade-in space-y-[var(--space-6)]">
               {post.content.map((p, i) => (
-                <p key={i} className="font-[family-name:var(--font-dm-sans)] text-charcoal-light leading-relaxed" style={{ fontSize: "var(--text-base)" }}>
+                <p key={i} className="font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed" style={{ fontSize: "var(--text-base)" }}>
                   {p}
                 </p>
               ))}
 
               {post.youtubeEmbed && (
                 <div className="mt-[var(--space-8)]">
-                  <iframe
-                    src={post.youtubeEmbed}
-                    title="Video"
-                    className="w-full aspect-video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  <div className="flex w-full aspect-video items-center justify-center rounded-lg border border-clay/15 bg-stone font-[family-name:var(--font-body)] text-sm text-charcoal-light">
+                    {post.youtubeEmbed}
+                  </div>
                 </div>
               )}
 
               {post.links && post.links.length > 0 && (
                 <div className="mt-[var(--space-8)] pt-[var(--space-6)] border-t border-clay/10">
-                  <p className="font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.2em] text-clay mb-[var(--space-3)]" style={{ fontSize: "var(--text-xs)" }}>
-                    Resources
-                  </p>
+                  <Eyebrow tone="clay" className="mb-[var(--space-3)]">Resources</Eyebrow>
                   {post.links.map((link) => (
                     <a
                       key={link.url}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block font-[family-name:var(--font-dm-sans)] text-navy hover:text-gold transition-colors duration-200 mb-[var(--space-2)] break-words"
+                      className="block font-[family-name:var(--font-body)] text-navy hover:text-gold transition-colors duration-200 mb-[var(--space-2)] break-words"
                       style={{ fontSize: "var(--text-sm)" }}
                     >
                       {link.text} &rarr;
@@ -209,10 +202,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="bg-navy py-[var(--space-20)]">
         <div className="grid-layout">
           <div className="col-full flex flex-col items-center text-center">
-            <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-white" style={{ fontSize: "var(--text-4xl)" }}>
+            <h2 className="font-[family-name:var(--font-heading)] font-semibold text-white" style={{ fontSize: "var(--text-4xl)" }}>
               Questions? We&apos;re here to help.
             </h2>
-            <a href={`tel:${clinic.phoneRaw}`} className="mt-[var(--space-8)] bg-gold px-8 py-3 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer">
+            <a href={`tel:${clinic.phoneRaw}`} className="mt-[var(--space-8)] rounded-full bg-gold px-8 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer">
               {clinic.phone}
             </a>
           </div>

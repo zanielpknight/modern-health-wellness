@@ -1,0 +1,36 @@
+/* aurora.css — ported from StrokesMotionKit (ui/aurora.css) and recoloured for
+   Modern Health & Wellness: stone ground with faint navy / gold / teal bands.
+   Two repeating gradients, 10px blur, slow drift, radial mask toward the top
+   corner. Fills its parent (which must be position: relative; overflow: hidden).
+   Pauses under prefers-reduced-motion. */
+.mhw-aurora {
+  --fl-aur-a: rgba(27, 58, 75, 0.08);   /* navy  #1B3A4B @ 8%  */
+  --fl-aur-b: rgba(200, 150, 62, 0.10); /* gold  #C8963E @ 10% */
+  --fl-aur-c: rgba(58, 125, 106, 0.06); /* teal  #3A7D6A @ 6%  */
+  --fl-aur-d: rgba(200, 150, 62, 0.10); /* gold  */
+  --fl-aur-e: rgba(27, 58, 75, 0.08);   /* navy  */
+  --fl-aur-ground: #FAF8F5;             /* stone */
+  position: absolute;
+  inset: -10px;
+  opacity: 1;
+  will-change: transform;
+  pointer-events: none;
+  filter: blur(10px);
+  background-image:
+    repeating-linear-gradient(100deg, var(--fl-aur-ground) 0%, var(--fl-aur-ground) 7%, transparent 10%, transparent 12%, var(--fl-aur-ground) 16%),
+    repeating-linear-gradient(100deg, var(--fl-aur-a) 10%, var(--fl-aur-b) 15%, var(--fl-aur-c) 20%, var(--fl-aur-d) 25%, var(--fl-aur-e) 30%);
+  background-size: 300% 200%;
+  background-position: 50% 50%, 50% 50%;
+  animation: mhw-aurora-drift 60s linear infinite;
+}
+.mhw-aurora--masked {
+  -webkit-mask-image: radial-gradient(ellipse at 0% 0%, #000 10%, transparent 70%);
+  mask-image: radial-gradient(ellipse at 0% 0%, #000 10%, transparent 70%);
+}
+@keyframes mhw-aurora-drift {
+  from { background-position: 50% 50%, 50% 50%; }
+  to   { background-position: 350% 50%, 350% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mhw-aurora { animation: none; }
+}

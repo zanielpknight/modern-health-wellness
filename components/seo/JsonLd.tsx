@@ -12,7 +12,7 @@ function getLocalBusinessSchema() {
     name: clinic.name,
     image: [], // Add real images later
     telephone: clinic.phone,
-    url: "https://modernhealthwellness.com",
+    url: "https://example.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: clinic.address.street,
@@ -20,11 +20,6 @@ function getLocalBusinessSchema() {
       addressRegion: clinic.address.state,
       postalCode: clinic.address.zip,
       addressCountry: "US",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: clinic.coordinates.lat,
-      longitude: clinic.coordinates.lng,
     },
     openingHoursSpecification: [
       {

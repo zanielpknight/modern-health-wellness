@@ -1,35 +1,36 @@
 import type { Metadata } from "next";
-import { Lora, Outfit } from "next/font/google";
+import { Fraunces, Figtree } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
 import "./globals.css";
 
-const lora = Lora({
-  variable: "--font-playfair",
+const fraunces = Fraunces({
+  variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: "variable",
+  axes: ["opsz", "SOFT"],
 });
 
-const outfit = Outfit({
-  variable: "--font-dm-sans",
+const figtree = Figtree({
+  variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "variable",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Modern Health & Wellness | Chiropractor in Hamden, CT",
+    default: "Modern Health & Wellness | Chiropractor in [City], [State]",
     template: "%s | Modern Health & Wellness",
   },
   description:
-    "Hamden's most trusted chiropractic team since 1990. Chiropractic care, acupuncture, personal training, massage therapy, and nutrition counseling.",
+    "[City]'s most trusted chiropractic team since 1990. Chiropractic care, acupuncture, personal training, massage therapy, and nutrition counseling.",
   openGraph: {
-    title: "Modern Health & Wellness | Chiropractor in Hamden, CT",
-    description: "3 doctors. 7 specialized services. 35+ years helping Hamden families move, heal, and thrive.",
-    url: "https://modernhealthwellness.com",
+    title: "Modern Health & Wellness | Chiropractor in [City], [State]",
+    description: "3 doctors. 7 specialized services. 35+ years helping families in [City] move, heal, and thrive.",
+    url: "https://example.com",
     siteName: "Modern Health & Wellness",
     locale: "en_US",
     type: "website",
@@ -40,7 +41,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${lora.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${figtree.variable}`}>
       <body className="grain">
         <a href="#main-content" className="skip-to-content">Skip to content</a>
         <Header />

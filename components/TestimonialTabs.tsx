@@ -19,13 +19,13 @@ export default function TestimonialTabs() {
           ))}
         </div>
         <p
-          className="font-[family-name:var(--font-playfair)] italic text-navy leading-snug transition-opacity duration-300"
+          className="font-[family-name:var(--font-heading)] italic text-navy leading-snug transition-opacity duration-300"
           style={{ fontSize: "clamp(1.25rem, 2.5vw, var(--text-3xl))" }}
         >
           &ldquo;{t.text}&rdquo;
         </p>
         <p
-          className="mt-[var(--space-4)] font-[family-name:var(--font-dm-sans)] text-charcoal-light"
+          className="mt-[var(--space-4)] font-[family-name:var(--font-body)] text-charcoal-light"
           style={{ fontSize: "var(--text-sm)" }}
         >
           {t.name}
@@ -41,7 +41,7 @@ export default function TestimonialTabs() {
           <button
             key={item.id}
             onClick={() => setActive(i)}
-            className={`px-2 sm:px-4 py-2 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.1em] transition-all duration-200 cursor-pointer ${
+            className={`px-2 sm:px-4 py-2 font-[family-name:var(--font-body)] text-[length:var(--text-xs)] text-sm transition-all duration-200 cursor-pointer ${
               i === active
                 ? "bg-navy text-white"
                 : "bg-transparent text-clay hover:text-navy border border-clay/20 hover:border-navy/30"

@@ -4,6 +4,7 @@ import ScrollFade from "@/components/ScrollFade";
 import PageHeader from "@/components/PageHeader";
 import { testimonials } from "@/lib/data/testimonials";
 import { clinic } from "@/lib/data/clinic";
+import Eyebrow from "@/components/Eyebrow";
 
 export const metadata: Metadata = {
   title: "Patient Testimonials",
@@ -38,14 +39,13 @@ export default function TestimonialsPage() {
                     ))}
                   </div>
                   <p
-                    className="font-[family-name:var(--font-playfair)] font-light italic text-navy leading-snug"
+                    className="font-[family-name:var(--font-heading)] font-light italic text-navy leading-snug"
                     style={{ fontSize: "clamp(1.25rem, 2vw, var(--text-3xl))" }}
                   >
                     &ldquo;{t.text}&rdquo;
                   </p>
                   <cite
-                    className="mt-[var(--space-4)] block font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.2em] text-clay not-italic"
-                    style={{ fontSize: "var(--text-xs)" }}
+                    className="mt-[var(--space-4)] block font-[family-name:var(--font-body)] text-sm text-clay not-italic"
                   >
                     {t.name}
                     {t.source && ` · ${t.source.charAt(0).toUpperCase() + t.source.slice(1)} Review`}
@@ -61,19 +61,17 @@ export default function TestimonialsPage() {
       <section className="section bg-warm-white">
         <div className="grid-layout">
           <div className="col-full md:col-left-7">
-            <p className="font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.25em] text-gold font-medium" style={{ fontSize: "var(--text-xs)" }}>
-              Share Your Experience
-            </p>
-            <h2 className="mt-[var(--space-3)] font-[family-name:var(--font-playfair)] font-semibold text-navy" style={{ fontSize: "var(--text-3xl)" }}>
+            <Eyebrow>Share your experience</Eyebrow>
+            <h2 className="mt-[var(--space-3)] font-[family-name:var(--font-heading)] font-semibold text-navy" style={{ fontSize: "var(--text-3xl)" }}>
               Had a great visit? Leave us a review.
             </h2>
             <a
               href={clinic.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-[var(--space-6)] inline-block bg-gold px-7 py-3 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer"
+              className="mt-[var(--space-6)] inline-block rounded-full bg-gold px-7 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer"
             >
-              Leave a Google Review
+              Leave a Google review
             </a>
           </div>
         </div>
@@ -83,11 +81,11 @@ export default function TestimonialsPage() {
       <section className="bg-navy py-[var(--space-20)]">
         <div className="grid-layout">
           <div className="col-full flex flex-col items-center text-center">
-            <h2 className="font-[family-name:var(--font-playfair)] font-semibold text-white" style={{ fontSize: "var(--text-4xl)" }}>
+            <h2 className="font-[family-name:var(--font-heading)] font-semibold text-white" style={{ fontSize: "var(--text-4xl)" }}>
               Your story starts here.
             </h2>
-            <a href={`tel:${clinic.phoneRaw}`} className="mt-[var(--space-8)] bg-gold px-8 py-3 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer">
-              Call to Book
+            <a href={`tel:${clinic.phoneRaw}`} className="mt-[var(--space-8)] rounded-full bg-gold px-8 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer">
+              Call to book
             </a>
           </div>
         </div>

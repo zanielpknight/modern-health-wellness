@@ -8,7 +8,7 @@ import { clinic } from "@/lib/data/clinic";
 export const metadata: Metadata = {
   title: "Conditions We Treat",
   description:
-    "Chiropractic care for auto accidents, low back pain, neck pain, headaches, shoulder injuries, sports injuries, and post-PT recovery in Hamden, CT.",
+    "Chiropractic care for auto accidents, low back pain, neck pain, headaches, shoulder injuries, sports injuries, and post-PT recovery in [City], [State].",
 };
 
 export default function ConditionsPage() {
@@ -25,7 +25,7 @@ export default function ConditionsPage() {
           <div className="grid-layout">
             <div className="col-full md:col-left-7 fade-in">
               <p
-                className="font-[family-name:var(--font-dm-sans)] text-charcoal-light leading-relaxed"
+                className="font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed"
                 style={{ fontSize: "var(--text-base)" }}
               >
                 Our approach isn&apos;t limited to treating symptoms — we help patients
@@ -53,19 +53,19 @@ export default function ConditionsPage() {
                   }`}
                 >
                   <h2
-                    className="font-[family-name:var(--font-playfair)] font-semibold text-navy group-hover:text-gold transition-colors duration-200"
+                    className="font-[family-name:var(--font-heading)] font-semibold text-navy group-hover:text-gold transition-colors duration-200"
                     style={{ fontSize: "var(--text-3xl)" }}
                   >
                     {condition.name}
                   </h2>
                   <p
-                    className="mt-[var(--space-3)] font-[family-name:var(--font-dm-sans)] text-charcoal-light leading-relaxed max-w-2xl"
+                    className="mt-[var(--space-3)] font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed max-w-2xl"
                     style={{ fontSize: "var(--text-base)" }}
                   >
                     {condition.shortDescription}
                   </p>
-                  <span className="mt-[var(--space-4)] inline-block font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-gold border-b border-gold/30 pb-1 group-hover:border-gold transition-colors duration-200">
-                    Learn More
+                  <span className="mt-[var(--space-4)] inline-block font-[family-name:var(--font-body)] text-sm font-medium text-gold border-b border-gold/30 pb-1 group-hover:border-gold transition-colors duration-200">
+                    Learn more
                   </span>
                 </div>
               </Link>
@@ -79,20 +79,20 @@ export default function ConditionsPage() {
         <div className="grid-layout">
           <div className="col-full flex flex-col items-center text-center">
             <h2
-              className="font-[family-name:var(--font-playfair)] font-semibold text-white"
+              className="font-[family-name:var(--font-heading)] font-semibold text-white"
               style={{ fontSize: "var(--text-4xl)" }}
             >
               Not sure what&apos;s causing your pain?
             </h2>
             <p
-              className="mt-[var(--space-3)] font-[family-name:var(--font-dm-sans)] text-white/50"
+              className="mt-[var(--space-3)] font-[family-name:var(--font-body)] text-white/50"
               style={{ fontSize: "var(--text-base)" }}
             >
               Schedule an evaluation and let us identify the source.
             </p>
             <a
               href={`tel:${clinic.phoneRaw}`}
-              className="mt-[var(--space-8)] bg-gold px-8 py-3 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer"
+              className="mt-[var(--space-8)] rounded-full bg-gold px-8 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer"
             >
               {clinic.phone}
             </a>

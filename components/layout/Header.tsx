@@ -20,7 +20,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -55,7 +54,7 @@ export default function Header() {
         >
           <Link
             href="/"
-            className={`font-[family-name:var(--font-playfair)] text-xl font-semibold tracking-wide lg:text-2xl transition-colors duration-200 ${textColor}`}
+            className={`font-[family-name:var(--font-heading)] text-xl font-semibold lg:text-2xl transition-colors duration-200 ${textColor}`}
           >
             Modern Health
           </Link>
@@ -67,7 +66,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.15em] transition-colors duration-200 ${
+                className={`font-[family-name:var(--font-body)] text-sm font-medium tracking-normal transition-colors duration-200 ${
                   pathname === link.href
                     ? "text-navy border-b border-navy/30"
                     : linkColor
@@ -80,9 +79,9 @@ export default function Header() {
 
           <a
             href={`tel:${clinic.phoneRaw}`}
-            className="ml-10 hidden border border-gold bg-gold px-6 py-2.5 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-white transition-all duration-200 hover:bg-gold-dark md:inline-block cursor-pointer whitespace-nowrap"
+            className="ml-10 hidden rounded-full bg-gold px-6 py-2.5 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark md:inline-block cursor-pointer whitespace-nowrap"
           >
-            Book Now
+            Book now
           </a>
 
           <button
@@ -90,9 +89,9 @@ export default function Header() {
             className="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden cursor-pointer"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            <span className={`block h-[1px] w-5 transition-all duration-300 ${menuOpen ? "translate-y-[7px] rotate-45 bg-navy" : isHome && !scrolled ? "bg-white" : "bg-navy"}`} />
-            <span className={`block h-[1px] w-5 transition-all duration-300 ${menuOpen ? "opacity-0 bg-navy" : isHome && !scrolled ? "bg-white" : "bg-navy"}`} />
-            <span className={`block h-[1px] w-5 transition-all duration-300 ${menuOpen ? "-translate-y-[7px] -rotate-45 bg-navy" : isHome && !scrolled ? "bg-white" : "bg-navy"}`} />
+            <span className={`block h-[1px] w-5 transition-all duration-300 ${menuOpen ? "translate-y-[7px] rotate-45 bg-navy"  : "bg-navy"}`} />
+            <span className={`block h-[1px] w-5 transition-all duration-300 ${menuOpen ? "opacity-0 bg-navy"  : "bg-navy"}`} />
+            <span className={`block h-[1px] w-5 transition-all duration-300 ${menuOpen ? "-translate-y-[7px] -rotate-45 bg-navy"  : "bg-navy"}`} />
           </button>
         </div>
       </nav>
@@ -108,7 +107,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`font-[family-name:var(--font-playfair)] text-3xl font-light transition-colors duration-200 ${
+              className={`font-[family-name:var(--font-heading)] text-3xl font-light transition-colors duration-200 ${
                 pathname === link.href ? "text-gold" : "text-navy hover:text-gold"
               }`}
             >
@@ -118,9 +117,9 @@ export default function Header() {
           <a
             href={`tel:${clinic.phoneRaw}`}
             onClick={() => setMenuOpen(false)}
-            className="mt-4 border border-gold bg-gold px-8 py-3 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer"
+            className="mt-4 rounded-full bg-gold px-8 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer"
           >
-            Book Now
+            Book now
           </a>
         </div>
       </div>

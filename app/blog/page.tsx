@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollFade from "@/components/ScrollFade";
 import PageHeader from "@/components/PageHeader";
+import Eyebrow from "@/components/Eyebrow";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -79,17 +80,15 @@ export default function BlogPage() {
                 className={`col-full fade-in group ${i > 0 ? "mt-[var(--space-4)]" : ""}`}
               >
                 <div className={`py-[var(--space-8)] ${i < posts.length - 1 ? "border-b border-clay/10" : ""}`}>
-                  <p className="font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.2em] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-                    {post.category} &middot; {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
-                  </p>
-                  <h2 className="mt-[var(--space-3)] font-[family-name:var(--font-playfair)] font-light text-navy group-hover:text-gold transition-colors duration-200" style={{ fontSize: "var(--text-3xl)" }}>
+                  <Eyebrow tone="clay">{post.category} &middot; {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</Eyebrow>
+                  <h2 className="mt-[var(--space-3)] font-[family-name:var(--font-heading)] font-light text-navy group-hover:text-gold transition-colors duration-200" style={{ fontSize: "var(--text-3xl)" }}>
                     {post.title}
                   </h2>
-                  <p className="mt-[var(--space-3)] font-[family-name:var(--font-dm-sans)] text-charcoal-light leading-relaxed max-w-2xl" style={{ fontSize: "var(--text-base)" }}>
+                  <p className="mt-[var(--space-3)] font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed max-w-2xl" style={{ fontSize: "var(--text-base)" }}>
                     {post.excerpt}
                   </p>
-                  <span className="mt-[var(--space-4)] inline-block font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-gold border-b border-gold/30 pb-1 group-hover:border-gold transition-colors duration-200">
-                    Read More
+                  <span className="mt-[var(--space-4)] inline-block font-[family-name:var(--font-body)] text-sm font-medium text-gold border-b border-gold/30 pb-1 group-hover:border-gold transition-colors duration-200">
+                    Read more
                   </span>
                 </div>
               </Link>

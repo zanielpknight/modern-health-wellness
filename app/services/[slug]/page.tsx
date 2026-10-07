@@ -18,6 +18,7 @@ const serviceImages: Record<string, string> = {
 import { getTestimonialsByService } from "@/lib/data/testimonials";
 import { conditions } from "@/lib/data/conditions";
 import { clinic } from "@/lib/data/clinic";
+import Eyebrow from "@/components/Eyebrow";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -47,8 +48,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <div className="pt-32 pb-[var(--space-8)] bg-warm-white">
         <div className="grid-layout">
           <div className="col-full">
-            <Link href="/services" className="font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-clay hover:text-navy transition-colors duration-200">
-              &larr; All Services
+            <Link href="/services" className="font-[family-name:var(--font-body)] text-sm font-medium text-clay hover:text-navy transition-colors duration-200">
+              &larr; All services
             </Link>
           </div>
         </div>
@@ -60,18 +61,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="grid-layout">
             <div className="col-full md:col-left-7 fade-in">
               {service.providers && (
-                <p className="mb-[var(--space-3)] font-[family-name:var(--font-dm-sans)] text-clay" style={{ fontSize: "var(--text-xs)" }}>
+                <p className="mb-[var(--space-3)] font-[family-name:var(--font-body)] text-clay" style={{ fontSize: "var(--text-xs)" }}>
                   {service.providers.join(" · ")}
                 </p>
               )}
-              <h1 className="font-[family-name:var(--font-playfair)] font-light text-navy" style={{ fontSize: "var(--text-5xl)", lineHeight: 1.15 }}>
+              <h1 className="font-[family-name:var(--font-heading)] font-light text-navy" style={{ fontSize: "var(--text-5xl)", lineHeight: 1.15 }}>
                 {service.name}
               </h1>
-              <p className="mt-[var(--space-6)] font-[family-name:var(--font-dm-sans)] text-charcoal-light leading-relaxed max-w-xl" style={{ fontSize: "var(--text-lg)" }}>
+              <p className="mt-[var(--space-6)] font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed max-w-xl" style={{ fontSize: "var(--text-lg)" }}>
                 {service.shortDescription}
               </p>
-              <a href={`tel:${clinic.phoneRaw}`} className="mt-[var(--space-8)] inline-block border border-gold bg-gold px-8 py-3 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer">
-                Book This Service
+              <a href={`tel:${clinic.phoneRaw}`} className="mt-[var(--space-8)] inline-block rounded-full border border-gold bg-gold px-8 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer">
+                Book this service
               </a>
             </div>
           </div>
@@ -95,18 +96,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <ScrollFade>
           <div className="grid-layout">
             <div className="col-full md:col-left-7 fade-in">
-              <p className="font-[family-name:var(--font-dm-sans)] text-charcoal-light leading-relaxed" style={{ fontSize: "var(--text-base)" }}>
+              <p className="font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed" style={{ fontSize: "var(--text-base)" }}>
                 {service.description}
               </p>
             </div>
             {service.benefits && (
               <div className="col-full md:col-right-5 fade-in mt-8 md:mt-0">
-                <p className="mb-[var(--space-4)] font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.3em] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-                  Benefits
-                </p>
+                <Eyebrow tone="clay" className="mb-[var(--space-4)]">Benefits</Eyebrow>
                 <ul className="space-y-[var(--space-3)]">
                   {service.benefits.map((b) => (
-                    <li key={b} className="font-[family-name:var(--font-dm-sans)] text-charcoal-light border-b border-clay/8 pb-[var(--space-3)]" style={{ fontSize: "var(--text-sm)" }}>
+                    <li key={b} className="font-[family-name:var(--font-body)] text-charcoal-light border-b border-clay/8 pb-[var(--space-3)]" style={{ fontSize: "var(--text-sm)" }}>
                       {b}
                     </li>
                   ))}
@@ -123,10 +122,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <ScrollFade>
             <div className="grid-layout">
               <div className="col-full md:col-left-7 fade-in">
-                <p className="mb-[var(--space-4)] font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.3em] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-                  What to Expect
-                </p>
-                <p className="font-[family-name:var(--font-dm-sans)] text-charcoal-light leading-relaxed" style={{ fontSize: "var(--text-base)" }}>
+                <Eyebrow tone="clay" className="mb-[var(--space-4)]">What to Expect</Eyebrow>
+                <p className="font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed" style={{ fontSize: "var(--text-base)" }}>
                   {service.whatToExpect}
                 </p>
               </div>
@@ -142,10 +139,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="grid-layout">
               <div className="col-full md:col-left-7 fade-in">
                 <blockquote>
-                  <p className="font-[family-name:var(--font-playfair)] font-light italic text-navy leading-snug" style={{ fontSize: "clamp(1.25rem, 2.5vw, var(--text-3xl))" }}>
+                  <p className="font-[family-name:var(--font-heading)] font-light italic text-navy leading-snug" style={{ fontSize: "clamp(1.25rem, 2.5vw, var(--text-3xl))" }}>
                     &ldquo;{relatedTestimonials[0].text}&rdquo;
                   </p>
-                  <cite className="mt-[var(--space-4)] block font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.2em] text-clay not-italic" style={{ fontSize: "var(--text-xs)" }}>
+                  <cite className="mt-[var(--space-4)] block font-[family-name:var(--font-body)] text-sm text-clay not-italic">
                     {relatedTestimonials[0].name}
                   </cite>
                 </blockquote>
@@ -161,12 +158,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <ScrollFade>
             <div className="grid-layout">
               <div className="col-full fade-in">
-                <p className="mb-[var(--space-4)] font-[family-name:var(--font-dm-sans)] uppercase tracking-[0.3em] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-                  Conditions We Treat
-                </p>
+                <Eyebrow tone="clay" className="mb-[var(--space-4)]">Conditions we treat</Eyebrow>
                 <div className="flex flex-wrap gap-x-[var(--space-8)] gap-y-[var(--space-3)]">
                   {relatedConditions.map((c) => c && (
-                    <Link key={c.slug} href={`/conditions/${c.slug}`} className="font-[family-name:var(--font-playfair)] italic text-navy hover:text-gold transition-colors duration-200" style={{ fontSize: "var(--text-xl)" }}>
+                    <Link key={c.slug} href={`/conditions/${c.slug}`} className="font-[family-name:var(--font-heading)] italic text-navy hover:text-gold transition-colors duration-200" style={{ fontSize: "var(--text-xl)" }}>
                       {c.name}
                     </Link>
                   ))}
@@ -181,11 +176,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="bg-navy py-[var(--space-20)]">
         <div className="grid-layout">
           <div className="col-full flex flex-col items-center text-center">
-            <h2 className="font-[family-name:var(--font-playfair)] font-light text-white" style={{ fontSize: "var(--text-4xl)" }}>
+            <h2 className="font-[family-name:var(--font-heading)] font-light text-white" style={{ fontSize: "var(--text-4xl)" }}>
               Ready to get started?
             </h2>
-            <a href={`tel:${clinic.phoneRaw}`} className="mt-[var(--space-8)] border border-gold bg-gold px-8 py-3 font-[family-name:var(--font-dm-sans)] text-[length:var(--text-xs)] uppercase tracking-[0.2em] text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer">
-              Call to Book
+            <a href={`tel:${clinic.phoneRaw}`} className="mt-[var(--space-8)] rounded-full border border-gold bg-gold px-8 py-3 font-[family-name:var(--font-body)] text-sm font-medium text-white transition-all duration-200 hover:bg-gold-dark cursor-pointer">
+              Call to book
             </a>
           </div>
         </div>
