@@ -4,6 +4,7 @@ import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
 import PageHeader from "@/components/PageHeader";
 import { services } from "@/lib/data/services";
+import { displayNameFor } from "@/lib/data/team";
 import { clinic } from "@/lib/data/clinic";
 
 const serviceImages: Record<string, string> = {
@@ -63,7 +64,7 @@ export default function ServicesPage() {
                     </p>
                     {service.providers && (
                       <p className="mt-[var(--space-3)] font-[family-name:var(--font-body)] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-                        {service.providers.join(" · ")}
+                        {service.providers.map(displayNameFor).join(" · ")}
                       </p>
                     )}
                     <span className="mt-[var(--space-4)] inline-block font-[family-name:var(--font-body)] text-sm font-medium text-gold border-b border-gold/30 pb-1 group-hover:border-gold transition-colors duration-200 self-start">

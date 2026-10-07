@@ -41,12 +41,12 @@ export default function AboutPage() {
                 <p>
                   Over the decades, that vision expanded. Dr. Nair
                   brought acupuncture and nutritional counseling into the practice.
-                  Dr. Bell — the next generation — added strength and
-                  conditioning expertise, bridging rehabilitation and performance.
+                  Dr. Bell — the next generation — added physical therapy and
+                  strength and conditioning expertise, bridging rehabilitation and performance.
                 </p>
                 <p>
                   Today we offer seven specialized services under one roof. We&apos;re
-                  proud to be the team chiropractors for the Austin Rivermen Hockey Club
+                  proud to be the team health partners for the Austin Rivermen Hockey Club
                   (2023 Southwest Regional Champions) — but we&apos;re equally proud of every patient who walks
                   through our doors.
                 </p>

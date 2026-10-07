@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
 import PageHeader from "@/components/PageHeader";
-import { getDoctors, getStaff } from "@/lib/data/team";
+import { getDoctors, getStaff, displayName } from "@/lib/data/team";
 import { clinic } from "@/lib/data/clinic";
 import Eyebrow from "@/components/Eyebrow";
 
@@ -46,16 +46,11 @@ export default function TeamPage() {
                     className="font-[family-name:var(--font-heading)] font-normal text-navy group-hover:text-gold transition-colors duration-200"
                     style={{ fontSize: "var(--text-2xl)" }}
                   >
-                    {doc.name}
+                    {displayName(doc)}
                   </h3>
                   <p className="mt-[var(--space-1)] font-[family-name:var(--font-body)] text-charcoal-light" style={{ fontSize: "var(--text-sm)" }}>
                     {doc.title}
                   </p>
-                  {doc.credentials && (
-                    <p className="mt-[var(--space-1)] font-[family-name:var(--font-body)] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-                      {doc.credentials.join(", ")}
-                    </p>
-                  )}
                   <p className="mt-[var(--space-3)] font-[family-name:var(--font-body)] text-charcoal-light leading-relaxed line-clamp-3" style={{ fontSize: "var(--text-sm)" }}>
                     {doc.bio}
                   </p>

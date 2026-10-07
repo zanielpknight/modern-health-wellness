@@ -44,9 +44,9 @@ export const services: Service[] = [
     slug: "personal-training",
     name: "Personal Training",
     shortDescription:
-      "Strength and conditioning programs designed by a CSCS-certified chiropractor who understands your body inside and out.",
+      "Strength and conditioning programs designed by a CSCS-certified physical therapist who understands your body inside and out.",
     description:
-      "Our personal training program is unlike anything you'll find at a gym. Led by Dr. Bell — a Certified Strength and Conditioning Specialist with a background in physical therapy — every workout is informed by clinical knowledge of your musculoskeletal system. We design programs that work with your body, not against it, whether you're building strength after rehab, training for athletic performance, or staying strong as you age. Future chiropractors also serve as trainers under Dr. Bell's direct guidance. Programs are available for all ages and abilities. You do not need to be an existing patient to sign up.",
+      "Our personal training program is unlike anything you'll find at a gym. Led by Dr. Bell — a Doctor of Physical Therapy and Certified Strength and Conditioning Specialist — every workout is informed by clinical knowledge of your musculoskeletal system. We design programs that work with your body, not against it, whether you're building strength after rehab, training for athletic performance, or staying strong as you age. Future clinicians also serve as trainers under Dr. Bell's direct guidance. Programs are available for all ages and abilities. You do not need to be an existing patient to sign up.",
     icon: "Barbell",
     featured: true,
     providers: ["Dr. Marcus Bell"],

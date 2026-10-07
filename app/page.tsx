@@ -4,7 +4,7 @@ import ScrollFade from "@/components/ScrollFade";
 import TestimonialTabs from "@/components/TestimonialTabs";
 import { clinic } from "@/lib/data/clinic";
 import { services } from "@/lib/data/services";
-import { getDoctors } from "@/lib/data/team";
+import { getDoctors, displayName } from "@/lib/data/team";
 import { conditions } from "@/lib/data/conditions";
 import Eyebrow from "@/components/Eyebrow";
 import StatsCards from "@/components/StatsCards";
@@ -63,7 +63,7 @@ export default function HomePage() {
 
             {/* Partner team callout */}
             <div className="mt-[var(--space-10)] pt-[var(--space-6)] border-t border-clay/15">
-              <Eyebrow>Official team chiropractors</Eyebrow>
+              <Eyebrow>Official team health partners</Eyebrow>
               <p
                 className="mt-[var(--space-2)] font-[family-name:var(--font-heading)] font-semibold text-navy"
                 style={{ fontSize: "var(--text-2xl)" }}
@@ -285,16 +285,11 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="mt-[var(--space-5)]">
-                    {doc.credentials && (
-                      <p className="font-[family-name:var(--font-body)] text-sm text-gold">
-                        {doc.credentials.join(" · ")}
-                      </p>
-                    )}
                     <h3
-                      className="mt-[var(--space-1)] font-[family-name:var(--font-heading)] font-semibold text-navy group-hover:text-gold transition-colors duration-200"
+                      className="font-[family-name:var(--font-heading)] font-semibold text-navy group-hover:text-gold transition-colors duration-200"
                       style={{ fontSize: "var(--text-2xl)" }}
                     >
-                      {doc.name}
+                      {displayName(doc)}
                     </h3>
                     <p className="mt-[var(--space-1)] font-[family-name:var(--font-body)] text-charcoal-light" style={{ fontSize: "var(--text-sm)" }}>
                       {doc.title}

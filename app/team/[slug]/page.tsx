@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollFade from "@/components/ScrollFade";
-import { team, getTeamMember } from "@/lib/data/team";
+import { team, getTeamMember, displayName } from "@/lib/data/team";
 import { clinic } from "@/lib/data/clinic";
 import Eyebrow from "@/components/Eyebrow";
 
@@ -21,7 +21,7 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
   return params.then(({ slug }) => {
     const member = getTeamMember(slug);
     if (!member) return { title: "Not Found" };
-    return { title: member.name, description: `${member.name} — ${member.title} at Modern Health & Wellness.` };
+    return { title: displayName(member), description: `${displayName(member)} — ${member.title} at Modern Health & Wellness.` };
   });
 }
 
@@ -60,11 +60,8 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
               </div>
             </div>
             <div className="col-full md:col-right-7 fade-in mt-8 md:mt-0">
-              {member.credentials && (
-                <Eyebrow tone="clay" className="mb-[var(--space-2)]">{member.credentials.join(" · ")}</Eyebrow>
-              )}
               <h1 className="font-[family-name:var(--font-heading)] font-light text-navy" style={{ fontSize: "var(--text-5xl)", lineHeight: 1.15 }}>
-                {member.name}
+                {displayName(member)}
               </h1>
               <p className="mt-[var(--space-2)] font-[family-name:var(--font-body)] text-gold" style={{ fontSize: "var(--text-lg)" }}>
                 {member.title}

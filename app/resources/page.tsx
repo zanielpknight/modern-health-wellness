@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import ScrollFade from "@/components/ScrollFade";
 import { clinic } from "@/lib/data/clinic";
 import Eyebrow from "@/components/Eyebrow";
+import { displayNameFor } from "@/lib/data/team";
 
 export const metadata: Metadata = {
   title: "Resources & Products",
@@ -107,7 +108,7 @@ export default function ResourcesPage() {
                       {p.description}
                     </p>
                     <p className="mt-[var(--space-1)] font-[family-name:var(--font-body)] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-                      By {p.provider}
+                      By {displayNameFor(p.provider)}
                     </p>
                   </div>
                   <span className="mt-2 sm:mt-0 font-[family-name:var(--font-body)] font-medium text-gold" style={{ fontSize: "var(--text-lg)" }}>

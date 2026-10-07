@@ -38,7 +38,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 4,
     name: "David K.",
-    text: "Dr. Bell's personal training program helped me get back to the gym safely after my back surgery. His knowledge of both chiropractic and strength training is exactly what I needed. I'm stronger now than before my injury.",
+    text: "Dr. Bell's personal training program helped me get back to the gym safely after my back surgery. His knowledge of both physical therapy and strength training is exactly what I needed. I'm stronger now than before my injury.",
     rating: 5,
     condition: "low-back-pain",
     service: "personal-training",
@@ -72,7 +72,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 8,
     name: "Tyler J.",
-    text: "As a competitive hockey player, having Dr. Carter and Dr. Bell as my chiropractors gives me a huge edge. They understand the demands of the sport and keep me performing at my best.",
+    text: "As a competitive hockey player, having Dr. Carter and Dr. Bell in my corner gives me a huge edge. They understand the demands of the sport and keep me performing at my best.",
     rating: 5,
     condition: "sports-injuries",
     service: "injury-rehab-chiropractic",

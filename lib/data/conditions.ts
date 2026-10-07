@@ -109,7 +109,7 @@ export const conditions: Condition[] = [
     shortDescription:
       "Comprehensive treatment for rotator cuff injuries, frozen shoulder, impingement, and other shoulder conditions.",
     description:
-      "The shoulder is one of the most complex and mobile joints in the body, making it vulnerable to a wide range of injuries and conditions. Whether you're dealing with a rotator cuff tear, frozen shoulder, impingement syndrome, or shoulder instability, our team combines chiropractic care with targeted rehabilitation to restore function and reduce pain. Dr. Bell's strength and conditioning background is particularly valuable for shoulder rehabilitation, ensuring you rebuild both mobility and strength.",
+      "The shoulder is one of the most complex and mobile joints in the body, making it vulnerable to a wide range of injuries and conditions. Whether you're dealing with a rotator cuff tear, frozen shoulder, impingement syndrome, or shoulder instability, our team combines chiropractic care with targeted rehabilitation to restore function and reduce pain. Dr. Bell's physical therapy and strength and conditioning background is particularly valuable for shoulder rehabilitation, ensuring you rebuild both mobility and strength.",
     symptoms: [
       "Pain when reaching overhead or behind your back",
       "Weakness when lifting or carrying",
@@ -133,7 +133,7 @@ export const conditions: Condition[] = [
     shortDescription:
       "From weekend warriors to NCAA athletes — expert sports injury treatment and performance optimization.",
     description:
-      "As the team chiropractors for the Austin Rivermen Hockey Club — 2023 Southwest Regional Champions — our doctors understand the demands athletes place on their bodies. Whether you're a competitive athlete dealing with a sports-specific injury or a recreational player who overdid it on the weekend, we provide the same level of expert care. Our approach goes beyond just treating the injury — we identify the underlying biomechanical issues that led to it and build a plan to get you back in the game stronger than before.",
+      "As the team health partners for the Austin Rivermen Hockey Club — 2023 Southwest Regional Champions — our doctors understand the demands athletes place on their bodies. Whether you're a competitive athlete dealing with a sports-specific injury or a recreational player who overdid it on the weekend, we provide the same level of expert care. Our approach goes beyond just treating the injury — we identify the underlying biomechanical issues that led to it and build a plan to get you back in the game stronger than before.",
     symptoms: [
       "Acute pain from a specific incident",
       "Chronic overuse injuries",
@@ -143,7 +143,7 @@ export const conditions: Condition[] = [
       "Persistent soreness that doesn't resolve with rest",
     ],
     howWeHelp:
-      "Our sports injury protocol combines rapid pain management with functional rehabilitation. We use chiropractic adjustments, soft tissue techniques, and evidence-based exercise prescription to accelerate your return to sport. Dr. Bell's CSCS certification means your rehab program is designed with athletic performance in mind — not just getting you pain-free, but getting you back to peak performance.",
+      "Our sports injury protocol combines rapid pain management with functional rehabilitation. Dr. Carter's chiropractic adjustments, soft tissue techniques, and Dr. Bell's evidence-based physical therapy and exercise prescription accelerate your return to sport. Dr. Bell's PT and CSCS background means your rehab program is designed with athletic performance in mind — not just getting you pain-free, but getting you back to peak performance.",
     relatedServices: [
       "injury-rehab-chiropractic",
       "personal-training",
@@ -167,7 +167,7 @@ export const conditions: Condition[] = [
       "Plateau in recovery progress",
     ],
     howWeHelp:
-      "Our post-PT program combines chiropractic adjustments to maintain joint mobility with Dr. Bell's strength and conditioning expertise to progressively load and strengthen the affected area. We pick up where PT left off — with a plan that evolves as you get stronger. The goal is to get you back to full activity, not just pain-free but performing at your best.",
+      "Our post-PT program combines Dr. Carter's chiropractic adjustments to maintain joint mobility with Dr. Bell's physical therapy and strength and conditioning expertise to progressively load and strengthen the affected area. We pick up where PT left off — with a plan that evolves as you get stronger. The goal is to get you back to full activity, not just pain-free but performing at your best.",
     relatedServices: [
       "injury-rehab-chiropractic",
       "personal-training",

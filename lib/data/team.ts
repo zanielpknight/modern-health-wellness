@@ -53,77 +53,75 @@ export const team: TeamMember[] = [
       { name: "Texas Chiropractic Association", url: "" },
       { name: "American Academy of Spine Physicians", url: "http://www.spinephysicians.org/" },
     ],
-      },
+  },
   {
     slug: "priya-nair",
     name: "Dr. Priya Nair",
-    title: "Chiropractor, Acupuncturist & Nutritionist",
+    title: "Acupuncturist & Nutritionist",
     role: "doctor",
-    credentials: ["DC", "LAc"],
-    bio: "Dr. Nair brings a truly integrative approach to patient care, combining chiropractic medicine with acupuncture and clinical nutrition. Her holistic philosophy means she looks at the whole person — not just the area of complaint. Whether she's placing acupuncture needles to manage chronic pain, designing a nutrition plan for sustainable weight loss, or performing chiropractic adjustments, Dr. Nair helps patients achieve balance and optimal health through multiple evidence-based modalities. She has kept abreast of the most recent research on nutrition and acupuncture, weight loss, weight management and wellness care.",
+    credentials: ["LAc"],
+    bio: "Dr. Nair is a licensed acupuncturist who brings a truly integrative approach to patient care, combining acupuncture with clinical nutrition. Her holistic philosophy means she looks at the whole person — not just the area of complaint. Whether she's placing acupuncture needles to manage chronic pain and stress or designing a nutrition plan for sustainable weight loss, Dr. Nair helps patients achieve balance and optimal health through complementary, evidence-based modalities. She has kept abreast of the most recent research on nutrition and acupuncture, weight loss, weight management and wellness care.",
     education: [
-      "Texas A&M University — B.S. Human Kinetics, 2004",
-      "Parker University — B.S. Human Biology & Doctor of Chiropractic, 2008",
-      "AOMA Graduate School of Integrative Medicine — Acupuncture Certification, 2010",
+      "Texas A&M University — B.S. Nutritional Sciences, 2004",
+      "AOMA Graduate School of Integrative Medicine — Master of Acupuncture and Oriental Medicine, 2008",
+      "Doctor of Acupuncture (DAc), 2012",
     ],
     practiceFocus: [
       "Nutritional counseling for weight loss, diabetes and heart disease prevention and management",
       "Acupuncture for headaches, back pain, joint pain, and weight loss",
       "Wellness and preventive care",
-      "Family chiropractic care",
-      "Orthopedic injuries (spine and extremities)",
+      "Women's health",
     ],
     specialties: [
       "Acupuncture & auriculotherapy",
       "Nutritional counseling & weight loss",
       "Holistic wellness",
       "Women's health",
-      "Family chiropractic care",
     ],
     employmentHistory: [
-      "2012–present: Chiropractor, Nutritionist & Acupuncturist — Modern Health and Wellness, Austin",
-      "2008–2012: Chiropractor & Acupuncturist — Hill Country Spine & Sport, San Antonio",
+      "2012–present: Acupuncturist & Nutritionist — Modern Health and Wellness, Austin",
+      "2008–2012: Acupuncturist — Hill Country Spine & Sport, San Antonio",
     ],
     personal: "Grew up in Dallas and has called Austin home since 2012. Enjoys spending time with her family, running, hiking, gardening, reading, and cooking.",
   },
   {
     slug: "marcus-bell",
     name: "Dr. Marcus Bell",
-    title: "Chiropractor & Strength Coach",
+    title: "Physical Therapist & Strength Coach",
     role: "doctor",
-    credentials: ["DC", "CSCS"],
-    bio: "After graduation with his Doctorate degree in Chiropractic, Dr. Bell was hired to be the chiropractor at Lone Star Physical Therapy & Chiropractic in Round Rock. Here he used both chiropractic care and physical therapy for hundreds of patients focusing on both chiropractic techniques and PT and worked closely with incredibly skilled physical therapists. He focuses his practice on wellness and treating orthopedic (spine and extremity) injuries. He also helps patients with auto accident and workers comp injuries, sports injuries and non-operative disc treatments. By working closely with the best PCPs, neurologists, orthopedic surgeons, and other healthcare specialists in Texas, we can provide patients with personalized care.",
-    quote: "Health-span — the number of years a person lives with FULL function — should be almost more important than life-span. By combining all aspects of preventative health care including nutrition, exercise, and chiropractic care with great patient education, we hope to achieve freedom of disease, injury, and stress for our patients.",
+    credentials: ["PT"],
+    bio: "After earning his Doctor of Physical Therapy degree, Dr. Bell joined Lone Star Physical Therapy in Round Rock, where he treated hundreds of patients and worked alongside an incredibly skilled team of physical therapists. He focuses his practice on orthopedic rehabilitation (spine and extremity), sports injuries, and post-surgical recovery. He also helps patients rehabilitate from auto accident and workers' comp injuries, and as a Certified Strength and Conditioning Specialist, he bridges the gap between rehab and long-term strength and performance. By working closely with the best PCPs, neurologists, orthopedic surgeons, and other healthcare specialists in Texas, we can provide patients with personalized care.",
+    quote: "Health-span — the number of years a person lives with FULL function — should be almost more important than life-span. By combining all aspects of preventative health care including nutrition, exercise, and physical therapy with great patient education, we hope to achieve freedom of disease, injury, and stress for our patients.",
     education: [
       "Texas State University — B.S. Exercise Science, 2014",
-      "Parker University — Doctor of Chiropractic, 2018",
+      "Texas State University — Doctor of Physical Therapy, 2017",
     ],
     postGradEducation: [
-      "Neurology",
-      "Radiology (X-ray)",
-      "Rehabilitation & orthopedics",
-      "Sports injuries",
+      "Orthopedic manual therapy",
+      "Post-surgical rehabilitation",
+      "Sports injury rehabilitation",
+      "Strength & conditioning",
     ],
     specialties: [
-      "Orthopedic spine & extremity",
-      "Auto accident & workers' comp injuries",
-      "Sports injuries",
-      "Non-operative disc treatment",
+      "Orthopedic rehabilitation (spine & extremity)",
+      "Sports injury rehab",
+      "Post-surgical rehabilitation",
+      "Auto accident & workers' comp rehab",
       "Strength & conditioning (CSCS)",
       "Personal training & group exercise",
       "Senior fitness & health-span",
     ],
     professionalAssociations: [
-      { name: "Board Certified Chiropractic Physician", url: "" },
+      { name: "American Physical Therapy Association", url: "https://www.apta.org/" },
       { name: "NSCA Certified Strength and Conditioning Specialist (CSCS)", url: "https://www.nsca.com/certification/cscs/" },
     ],
-    firstVisitInfo: "During your first visit, you'll receive a thorough consultation, spinal assessment, and review of your medical history. Following this, prior test results like x-ray films, MRI results or labs will be consulted and/or recommended (imaging taken typically at Lakeline Imaging Center). Based on this information, Dr. Bell will design a personalized treatment plan based on your condition, lifestyle, and health goals. Our approach often includes safe chiropractor-based adjustments and techniques, specific and safe rehab exercises, nutritional support, and ergonomic advice to promote healing and prevent reinjury. Follow-up visits are tailored to your progress, with continuous evaluation to ensure optimal results.",
+    firstVisitInfo: "Your first visit is a comprehensive physical therapy evaluation: a thorough consultation, review of your medical history, and assessment of your movement, strength, range of motion, and function. Prior test results like x-ray films, MRI results, or surgical notes will be reviewed and/or recommended (imaging taken typically at Lakeline Imaging Center). Based on this information, Dr. Bell will design a personalized plan of care based on your condition, lifestyle, and goals. Treatment often includes hands-on manual therapy, specific and safe therapeutic exercise, progressive strength work, and ergonomic and activity advice to promote healing and prevent reinjury. Follow-up visits are tailored to your progress, with continuous re-assessment to ensure optimal results.",
     treatmentCriteria: [
       "Best available evidence-based practice guidelines and standard of care",
       "Physicians' expertise and experience with similar conditions",
       "Patients' comfort, goals and trust",
     ],
-    personal: "Former college baseball player at Texas State University. Previously at Lone Star Physical Therapy & Chiropractic. Enjoys resistance training, hiking, golfing, and cooking. Stays up to date on the most current literature on exercise and nutrition.",
+    personal: "Former college baseball player at Texas State University. Previously at Lone Star Physical Therapy in Round Rock. Enjoys resistance training, hiking, golfing, and cooking. Stays up to date on the most current literature on exercise and nutrition.",
   },
   {
     slug: "maria-lopez",
@@ -161,6 +159,17 @@ export const team: TeamMember[] = [
     bio: "",
   },
 ];
+
+/** Full display name with credentials appended, e.g. "Dr. James Carter, DC". */
+export function displayName(member: Pick<TeamMember, "name" | "credentials">): string {
+  return member.credentials?.length ? `${member.name}, ${member.credentials.join(", ")}` : member.name;
+}
+
+/** Look up a team member by plain name and return their credentialed display name. */
+export function displayNameFor(name: string): string {
+  const member = team.find((m) => m.name === name);
+  return member ? displayName(member) : name;
+}
 
 export function getDoctors(): TeamMember[] {
   return team.filter((m) => m.role === "doctor");

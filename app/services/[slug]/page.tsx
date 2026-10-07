@@ -17,6 +17,7 @@ const serviceImages: Record<string, string> = {
 import { getTestimonialsByService } from "@/lib/data/testimonials";
 import { conditions } from "@/lib/data/conditions";
 import { clinic } from "@/lib/data/clinic";
+import { displayNameFor } from "@/lib/data/team";
 import Eyebrow from "@/components/Eyebrow";
 
 export function generateStaticParams() {
@@ -61,7 +62,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="col-full md:col-left-7 fade-in">
               {service.providers && (
                 <p className="mb-[var(--space-3)] font-[family-name:var(--font-body)] text-clay" style={{ fontSize: "var(--text-xs)" }}>
-                  {service.providers.join(" · ")}
+                  {service.providers.map(displayNameFor).join(" · ")}
                 </p>
               )}
               <h1 className="font-[family-name:var(--font-heading)] font-light text-navy" style={{ fontSize: "var(--text-5xl)", lineHeight: 1.15 }}>
